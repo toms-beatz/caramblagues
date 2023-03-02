@@ -1,0 +1,107 @@
+/* rgb(225, 0, 121) rose */
+/* rgb(254, 222, 39) jaune */
+
+body {
+    background-color: rgb(254, 222, 39, .5);
+}
+
+#setup {
+    color: rgb(225, 0, 121);
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#delivery {
+    transform: rotate(180deg);
+    color: rgb(225, 0, 121);
+    font-size: 1rem;
+}
+
+.column {
+    height: 100vh;
+}
+
+.jokes-column {
+    justify-content: center;
+}
+
+.pattern {
+    height: 100%;
+    width: 20%;
+}
+
+.pattern-container-start .pattern:nth-child(even) {
+    background-color: rgb(255,255,255);
+}
+
+.pattern-container-start .pattern:nth-child(odd) {
+    background-color: rgb(225, 0, 121, .5);
+}
+
+.pattern-container-end .pattern:nth-child(even) {
+    background-color: rgb(225, 0, 121, .5);
+}
+
+.pattern-container-end .pattern:nth-child(odd) {
+    background-color: rgb(255,255,255);
+}
+
+.pink-pattern {
+    background-color: rgb(225, 0, 121, .5);
+    height: 100%;
+    width: 20%;
+}
+
+#turn-around,
+#next-joke {
+    width: 20%;
+    margin: 2rem auto 0 auto;
+    background-color: rgb(225, 0, 121, .9);
+    color: rgb(255,255,255);
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 0%;
+}
+
+@font-face {
+    font-family: "Bouncy";
+    src: local("Bouncy"), url("../font/bouncy_2/Bouncy-Thin-PERSONAL_USE_ONLY.otf") format("opentype");
+}
+
+.logo {
+    font-family: 'Bouncy';
+    color: rgb(225, 0, 121);
+    position: absolute;
+    top: 2rem;
+}
+
+#turn-around::before {
+    content: "Retourner";
+}
+
+#next-joke::before {
+    content: "Suivante";
+}
+
+@media only screen and (max-width: 600px) {
+
+    #turn-around::before,
+    #next-joke::before {
+        content: "";
+    }
+}
+
+#turn-around svg:hover{
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    transform:rotate(360deg); 
+    -webkit-transform:rotate(360deg); 
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg); 
+}
+
